@@ -34,8 +34,6 @@ Este é um projeto de microserviço para gerenciamento de pedidos, desenvolvido 
 
 ## Documentação da API
 
-![Screenshot 2024-07-16 162520](https://github.com/user-attachments/assets/7d70992d-b63e-4d2c-a0d8-b1723063ea82)
-
 Após iniciar a aplicação, a documentação da API estará disponível em `http://localhost:8080/swagger-ui.html`. Aqui, você pode visualizar todos os endpoints disponíveis e testá-los diretamente pela interface do Swagger.
 
 ## Contribuindo
@@ -44,3 +42,4 @@ Sinta-se à vontade para contribuir com o projeto. Para isso, por favor, siga o 
 ## Licença
 Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
 ```
+![Screenshot 2024-07-16 162520](https://github.com/user-attachments/assets/7d70992d-b63e-4d2c-a0d8-b1723063ea82)
