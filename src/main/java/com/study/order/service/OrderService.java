@@ -3,8 +3,11 @@ package com.study.order.service;
 import com.study.order.model.Order;
 import com.study.order.model.dto.OrderCreatedEvent;
 import com.study.order.model.OrderItem;
+import com.study.order.model.dto.OrderResponse;
 import com.study.order.repository.OrderRepository;
 import lombok.AllArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -34,5 +37,10 @@ public class OrderService {
         return orderCreatedEvent.itens().stream()
                 .map(i -> new OrderItem(i.produto(), i.quantidade(), i.preco()))
                 .toList();
+    }
+
+    public Page<OrderResponse> findAllByCustomerId(Long customerId, PageRequest pageRequest) {
+        Page<Order> orders = orderRepository.findAllByCustomerId(customerId, pageRequest);
+        return orders.map(OrderResponse::fromOrder);
     }
 }

@@ -19,22 +19,3 @@ public class OrderCreatedListener {
         orderService.createOrder(message.getPayload());
     }
 }
- /**
-  *
-  * {
-  *   "codigoPedido": 1001,
-  *   "codigoCliente": 1,
-  *   "itens": [
-  *     {
-  *       "produto": "caneta",
-  *       "quantidade": 10,
-  *       "preco": 2.1
-  *     },
-  *     {
-  *       "produto": "apostila",
-  *       "quantidade": 30,
-  *       "preco": 10
-  *     }
-  *   ]
-  * }
-  */
