@@ -1,7 +1,7 @@
 package com.study.order.service;
 
 import com.study.order.model.Order;
-import com.study.order.model.OrderCreatedEvent;
+import com.study.order.model.dto.OrderCreatedEvent;
 import com.study.order.model.OrderItem;
 import com.study.order.repository.OrderRepository;
 import lombok.AllArgsConstructor;

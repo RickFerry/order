@@ -1,4 +1,4 @@
-package com.study.order.model;
+package com.study.order.model.dto;
 
 import java.util.List;
 

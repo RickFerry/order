@@ -1,6 +1,6 @@
 package com.study.order.listener;
 
-import com.study.order.model.OrderCreatedEvent;
+import com.study.order.model.dto.OrderCreatedEvent;
 import com.study.order.service.OrderService;
 import lombok.AllArgsConstructor;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
