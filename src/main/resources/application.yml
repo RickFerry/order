@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: order
+  data:
+      mongodb:
+        uri: mongodb+srv://ferry:${PASS}@btg-pactual.oyj2ffe.mongodb.net/?
+        database: Btg-Pactual
+        auto-index-creation: true
+  rabbitmq:
+    addresses: amqps://dyoqwowg:Pq75SyvChO1QCIYQ1QVoJ2XfXzb3dUf5@prawn.rmq.cloudamqp.com/dyoqwowg
