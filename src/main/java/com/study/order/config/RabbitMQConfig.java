@@ -15,7 +15,7 @@ public class RabbitMQConfig {
     }
 
     @Bean
-    public Queue orderCreatedQueue() {
+    Queue orderCreatedQueue() {
         return new Queue(ORDER_CREATED_QUEUE, true);
     }
 }
