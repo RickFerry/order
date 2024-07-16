@@ -15,9 +15,9 @@ import java.util.List;
 
 @Getter
 @Setter
-@Document(collection = "orders")
 @AllArgsConstructor
 @NoArgsConstructor
+@Document(collection = "orders")
 public class Order {
     @MongoId
     private Long orderId;
@@ -30,3 +30,4 @@ public class Order {
 
     private List<OrderItem> orderItems;
 }
+

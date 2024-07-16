@@ -10,6 +10,9 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigDecimal;
+import java.util.Map;
+
 @RestController
 @AllArgsConstructor
 public class OrderController {
@@ -20,6 +23,10 @@ public class OrderController {
                                                                 @RequestParam(name = "page", defaultValue = "0") Integer page,
                                                                 @RequestParam(name = "size", defaultValue = "10") Integer size) {
         Page<OrderResponse> body = orderService.findAllByCustomerId(customerId, PageRequest.of(page, size));
-        return ResponseEntity.ok(new ApiResponse<>(body.getContent(), PaginationResponse.fromPage(body)));
+        BigDecimal totalOnOrders = orderService.getTotalAmountOnOrderByCustomerId(customerId);
+        return ResponseEntity.ok(new ApiResponse<>(
+                Map.of("totalAmount", totalOnOrders),
+                body.getContent(),
+                PaginationResponse.fromPage(body)));
     }
 }
